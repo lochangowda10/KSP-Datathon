@@ -33,7 +33,7 @@ def test_authenticate_user():
     user = authenticate_user("nonexistent@ksp.gov.in", "password")
     assert user is None
 
-    print("✓ authenticate_user tests passed")
+    print("[PASS] authenticate_user tests passed")
 
 def test_get_user_role_permissions():
     """Test getting permissions for roles."""
@@ -43,7 +43,7 @@ def test_get_user_role_permissions():
     assert get_user_role_permissions("viewer") == ["read"]
     assert get_user_role_permissions("unknown") == []
 
-    print("✓ get_user_role_permissions tests passed")
+    print("[PASS] get_user_role_permissions tests passed")
 
 def test_check_permission():
     """Test permission checking."""
@@ -58,7 +58,7 @@ def test_check_permission():
     assert check_permission(user, "delete") == False
     assert check_permission(user, "admin") == False
 
-    print("✓ check_permission tests passed")
+    print("[PASS] check_permission tests passed")
 
 def test_validate_token():
     """Test token validation."""
@@ -73,7 +73,7 @@ def test_validate_token():
     assert validate_token("") is None
     assert validate_token(None) is None
 
-    print("✓ validate_token tests passed")
+    print("[PASS] validate_token tests passed")
 
 def test_require_auth_decorator():
     """Test the require_auth decorator."""
@@ -82,7 +82,7 @@ def test_require_auth_decorator():
     assert require_auth is not None
     assert require_auth([]) is not None
 
-    print("✓ require_auth decorator tests passed")
+    print("[PASS] require_auth decorator tests passed")
 
 if __name__ == "__main__":
     test_authenticate_user()

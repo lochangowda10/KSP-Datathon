@@ -35,7 +35,7 @@ def test_detect_trends():
     assert "forecast" in result
     assert isinstance(result["forecast"], list)
 
-    print("✓ detect_trends test passed")
+    print("PASS: detect_trends test passed")
 
 def test_calculate_risk_score():
     """Test risk score calculation."""
@@ -53,7 +53,7 @@ def test_calculate_risk_score():
     assert isinstance(result["score"], (int, float))
     assert 0 <= result["score"] <= 100
 
-    print("✓ calculate_risk_score test passed")
+    print("PASS: calculate_risk_score test passed")
 
 def test_analyze_network():
     """Test network analysis."""
@@ -76,7 +76,7 @@ def test_analyze_network():
     assert result["node_count"] == 3
     assert result["edge_count"] == 2
 
-    print("✓ analyze_network test passed")
+    print("PASS: analyze_network test passed")
 
 def test_generate_report():
     """Test report generation."""
@@ -89,7 +89,7 @@ def test_generate_report():
     assert "data_summary" in result
     assert "sections" in result
 
-    print("✓ generate_report test passed")
+    print("PASS: generate_report test passed")
 
 def test_process_natural_language():
     """Test NLP processing."""
@@ -101,7 +101,7 @@ def test_process_natural_language():
     assert "entities" in result
     assert "confidence" in result
 
-    print("✓ process_natural_language test passed")
+    print("PASS: process_natural_language test passed")
 
 def test_translate_text():
     """Test translation function."""
@@ -115,7 +115,7 @@ def test_translate_text():
     assert "target_language" in result
     assert result["target_language"] == "es"
 
-    print("✓ translate_text test passed")
+    print("PASS: translate_text test passed")
 
 if __name__ == "__main__":
     test_detect_trends()
